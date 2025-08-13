@@ -1,6 +1,5 @@
 package POM_Candidate;
 
-
 	import org.openqa.selenium.Keys;
     import org.openqa.selenium.WebDriver;
 	import org.openqa.selenium.WebElement;
@@ -10,6 +9,12 @@ package POM_Candidate;
 
 	public class Candidate_LoginPage 
 	{
+		 public WebDriver driver;
+			
+	      public Candidate_LoginPage(WebDriver driver) {
+	        this.driver = driver;
+	        PageFactory.initElements(driver, this);
+	  }
 
 		    @FindBy(name="email")
 			private WebElement emailid;
@@ -31,18 +36,16 @@ package POM_Candidate;
 			
 			@FindBy(xpath="//p[text()='Email is required!']")
 			private WebElement errormsg_blankemail;
-			
-			public Candidate_LoginPage (WebDriver driver)
-			{
-				PageFactory.initElements(driver, this);
-			}
+
+
+	
 			public boolean is_candidatemailfield_present()
 			{
 				return emailid.isDisplayed();
 			}
-			public void enteremail(String Candidate_Email)
+			public void enteremail(String Email)
 			{
-				emailid.sendKeys(Candidate_Email);
+				emailid.sendKeys(Email);
 			}
 			public boolean is_candidatepasswordsfield_present()
 			{

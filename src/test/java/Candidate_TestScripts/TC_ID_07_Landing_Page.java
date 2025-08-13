@@ -125,6 +125,10 @@ public class TC_ID_07_Landing_Page extends BaseTest
 		l.submitjob();
 		Thread.sleep(3000);
 		Assert.assertTrue(l.is_applied_text_display(), "Applied text should be display");
+		
+	    BaseTest browser = new BaseTest();
+	       
+	       browser.closeApp();
 	}
 
 }

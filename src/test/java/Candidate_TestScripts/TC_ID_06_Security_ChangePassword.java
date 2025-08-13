@@ -84,6 +84,9 @@ public class TC_ID_06_Security_ChangePassword extends BaseTest
 	   
 	    		break;
 
+	    		
 	  }
-
+	    	    BaseTest browser = new BaseTest();
+	    	       
+	    	       browser.closeApp();
 	   } }

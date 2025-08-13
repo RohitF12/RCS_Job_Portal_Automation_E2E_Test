@@ -53,6 +53,10 @@ public class TC_ID_07_JobListing_Direct_JobApply extends BaseTest
 		//Verify the text 'Applied' display
 		JobListing_Direct_JobApply j= new JobListing_Direct_JobApply(candidatedriver);
 		j.is_applied_text_display();
+		
+	    BaseTest browser = new BaseTest();
+	       
+	       browser.closeApp();
 	}
 
 }

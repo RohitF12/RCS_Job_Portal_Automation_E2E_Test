@@ -153,6 +153,11 @@ public class TC_ID_21_Forgot_Password extends BaseTest
     		 f.enterchangedpass(Changed_Password);
     		 loginpage.Clicklogin();
     		 break;
+    		    		 
     	 }
+    	 
+    	    BaseTest browser = new BaseTest();
+    	       
+    	       browser.closeApp();
 	}
 }

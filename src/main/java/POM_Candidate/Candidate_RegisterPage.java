@@ -6,9 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.mailosaur.models.Message;
-
 import base.EmailTest;
 import base.Property_File;
 import utils.ExcelUtilityReg;

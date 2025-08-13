@@ -2,7 +2,11 @@ package utils;
  
 import java.util.Date;
 import java.util.List;
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,17 +21,18 @@ public class ExcelUtilityReg
         private Workbook workbook;
 	    private Sheet sheet;
  
-	  /*  public ExcelUtilityReg(String filePath, String sheetName) throws IOException 
+	    public ExcelUtilityReg(String filePath, String sheetName) throws IOException 
 	    {
 	        FileInputStream fis = new FileInputStream(filePath);
 	        workbook = new XSSFWorkbook(fis);
 	        // Debugging: Print all available sheet names
-	        System.out.println("Available sheets in the workbook:");
-	        for (int i = 0; i < workbook.getNumberOfSheets(); i++) 
+	    //    System.out.println("Available sheets in the workbook:");
+	        
+	    /*    for (int i = 0; i < workbook.getNumberOfSheets(); i++) 
 	        {
 	            System.out.println(workbook.getSheetName(i));
 	        }
- 
+        */
 	        // Load the specified sheet
 	        sheet = workbook.getSheet(sheetName);
 	        if (sheet == null) 
@@ -61,7 +66,7 @@ public class ExcelUtilityReg
 	    public void close() throws IOException 
 	    {
 	        workbook.close();
-	    }*/
+	    }
 	/*    public ExcelUtilityReg(String filePath, String sheetName) throws IOException {
 	        FileInputStream fis = new FileInputStream(filePath);
 	        workbook = new XSSFWorkbook(fis);
@@ -124,8 +129,8 @@ public class ExcelUtilityReg
 	    public void close() throws IOException {
 	        workbook.close();
 	    }
-	}*/
-	    public ExcelUtilityReg(String filePath, String sheetName) throws IOException {
+	}
+	 /*  public ExcelUtilityReg(String filePath, String sheetName) throws IOException {
 	        FileInputStream fis = new FileInputStream(filePath);
 	        workbook = new XSSFWorkbook(fis);
  
@@ -183,6 +188,6 @@ public class ExcelUtilityReg
  
 	    public void close() throws IOException {
 	        workbook.close();
-	    }
+	    }*/
 	}
  

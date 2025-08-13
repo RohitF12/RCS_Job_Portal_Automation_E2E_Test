@@ -91,5 +91,9 @@ public class TC_ID_07_Dashboard_Page extends BaseTest
 			Your_Applications_Page  a = new Your_Applications_Page (candidatedriver);
 			Assert.assertTrue(a.is_page_name_display(), "Your applications page should be display");
 		    a.print_pagename();
+		    
+		    BaseTest browser = new BaseTest();
+	   	       
+	   	       browser.closeApp();
 		}
 }

@@ -189,6 +189,10 @@ public class TC_ID_06_Update_Profile_while_applying_for_job extends BaseTest
     	p.openprofile();
     	p.clickonedittab();
     	p.verify_details_on_Profile_Page();
+    	
+        BaseTest browser = new BaseTest();
+	       
+	       browser.closeApp();
 	}
 	
 }

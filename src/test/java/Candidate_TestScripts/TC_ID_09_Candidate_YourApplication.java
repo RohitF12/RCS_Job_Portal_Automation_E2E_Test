@@ -97,5 +97,9 @@ public class TC_ID_09_Candidate_YourApplication extends BaseTest
 		Your_Applications_Page  a = new Your_Applications_Page (candidatedriver);
 		methods.switchingtabs(candidatedriver);
 		a.verify_samejob_display();
+		
+	    BaseTest browser = new BaseTest();
+	       
+	       browser.closeApp();
 	}
 }

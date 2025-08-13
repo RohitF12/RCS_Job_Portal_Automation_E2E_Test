@@ -210,6 +210,10 @@ public class TC_ID_06_Candidate_Profile_Update extends BaseTest
         
             p.is_emaildetails_displayed();
             System.out.println(p.email_details());
+            
+            BaseTest browser = new BaseTest();
+    	       
+    	       browser.closeApp();
 
     }
 }

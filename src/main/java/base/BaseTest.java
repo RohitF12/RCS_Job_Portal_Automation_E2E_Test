@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import java.io.IOException;
 import java.time.Duration;
 import POM_Candidate.Candidate_LoginPage;
@@ -17,14 +19,13 @@ import POM_Candidate.Candidate_LoginPage;
     public WebDriver candidatedriver;
 
     public Property_File data = new Property_File();
-    public Basic_Methods methods = new Basic_Methods();
+   public Basic_Methods methods = new Basic_Methods();
     public EmailTest emailTest = new EmailTest();
 
-    public WebDriver getDriver() {
+   public WebDriver getDriver() {
     	
         return driver;
     }
-        
     public void openAdminbrowser() throws IOException {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
@@ -34,7 +35,7 @@ import POM_Candidate.Candidate_LoginPage;
         admindriver.get(Config.getProperty("Admin_Login"));
 
     }
-
+  //  @BeforeTest
     public void openCandidatebrowser() throws IOException {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
@@ -84,6 +85,8 @@ import POM_Candidate.Candidate_LoginPage;
  	        login2Portal.enterPassword(password);
  	        login2Portal.clickLogin();
     }
+    
+  // @BeforeTest    
     public void logincandidate() throws IOException
     
        {
@@ -143,5 +146,7 @@ import POM_Candidate.Candidate_LoginPage;
 
        System.out.println("All drivers closed successfully.");
    }
+   
+   
 }
     

@@ -1,13 +1,11 @@
 package Candidate_TestScripts;
 
 import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
+import base.EmailTest;
 import com.mailosaur.MailosaurException;
-
 import base.BaseTest;
 import base.EmailTest;
 import utils.ExcelUtilityReg;
@@ -126,6 +124,7 @@ public class TC_ID_05_Register_and_Login extends BaseTest
 		//Verify user able to validate OTP
 		Candidate_RegisterPage r = new Candidate_RegisterPage(candidatedriver);
 		Thread.sleep(10000);
+		
 		String OTP=emailTest.ReadEmail();
 		r.enterotp(OTP);
 	    r.verifyOTP();
@@ -162,8 +161,11 @@ public class TC_ID_05_Register_and_Login extends BaseTest
 	    		loginpage.Clicklogin();
 	    		break;
 
+	    		
 	    	 }
-		
+	    	    BaseTest browser = new BaseTest();
+	    	       
+	    	       browser.closeApp();
 	}
 	
 }

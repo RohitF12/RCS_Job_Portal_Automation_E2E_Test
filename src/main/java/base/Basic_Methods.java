@@ -11,16 +11,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-
-import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.sl.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+
 import java.io.File;
 public class Basic_Methods 
 {
@@ -124,8 +124,8 @@ public class Basic_Methods
 	{
         FileInputStream fis = new FileInputStream(new File(filePath));
         Workbook workbook = new XSSFWorkbook(fis);
-        Sheet sheet = workbook.getSheetAt(5);
-        Row row = sheet.getRow(rowNum);
+        Sheet sheet = (Sheet) workbook.getSheetAt(5);
+        Row row = ((org.apache.poi.ss.usermodel.Sheet) sheet).getRow(rowNum);
         Cell cell = row.getCell(colNum);
         String cellValue = cell.toString().trim();
         workbook.close();

@@ -126,6 +126,10 @@ public class TC_ID_07_Candidate_Job_Apply extends BaseTest
 		j.submitjob();
 		Thread.sleep(3000);
 		Assert.assertTrue(j.is_applied_text_display(), "Applied text should be display");
+		
+	    BaseTest browser = new BaseTest();
+	       
+	       browser.closeApp();
 	}
 	
 }

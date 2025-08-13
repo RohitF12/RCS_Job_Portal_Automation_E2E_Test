@@ -2,17 +2,16 @@ package base;
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import javax.mail.BodyPart;
-
 import com.mailosaur.MailosaurClient;
 import com.mailosaur.MailosaurException;
 import com.mailosaur.models.Message;
 import com.mailosaur.models.MessageSearchParams;
 import com.mailosaur.models.SearchCriteria;
 public class EmailTest 
+
 {
 	
 	public String ReadEmail() throws IOException, MailosaurException

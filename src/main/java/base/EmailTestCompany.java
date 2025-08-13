@@ -1,4 +1,4 @@
-package base;
+/*package base;
 
 import java.io.IOException;
 import java.util.regex.Matcher;
@@ -68,3 +68,4 @@ public class EmailTestCompany
 	}
 
 }
+*/

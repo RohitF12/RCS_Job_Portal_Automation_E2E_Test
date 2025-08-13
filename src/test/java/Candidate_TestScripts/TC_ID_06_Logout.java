@@ -26,6 +26,10 @@ public class TC_ID_06_Logout extends BaseTest
 	   System.out.println(actualURL);
 	   String ExpectedURL=data.getdata("candidateloginurl");
 	   Assert.assertEquals(actualURL, ExpectedURL,"Login page does not display");
+	   
+	    BaseTest browser = new BaseTest();
+	       
+	       browser.closeApp();
 	   }
 
 }

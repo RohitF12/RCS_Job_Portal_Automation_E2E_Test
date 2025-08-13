@@ -104,6 +104,16 @@ public class Add_Candidate_Page extends BaseTest
 
 	@FindBy(xpath="//h3[text()='Add New Candidate']")
 	private WebElement pagename;
+	
+	
+	
+    public Add_Candidate_Page (WebDriver driver)
+	{
+		PageFactory.initElements(driver, this);
+	}
+   	
+	
+	
 	public boolean is_PaneName_display()
 	{
 		return pagename.isDisplayed() ;
@@ -235,10 +245,10 @@ public class Add_Candidate_Page extends BaseTest
 		
 	}
 	
-    public Add_Candidate_Page (WebDriver driver)
-	{
-		PageFactory.initElements(driver, this);
-	}
+	
+
+    
+    
     public boolean is_namefield_displayed()
    	{
    		return candidatename.isDisplayed();
